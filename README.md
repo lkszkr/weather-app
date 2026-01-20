@@ -1,0 +1,1 @@
+Run `npx setup-webpack` to install all up to date basic loaders and modules for webpack used in config file
