@@ -1,0 +1,73 @@
+@import url(./reset.css);
+@import url(./header.css);
+
+:root {
+    --main-accent: #51a1ff;
+
+    --tile-light: #f9fdff;
+    --background-light: #f1f7f9;
+    --button-light: #555c67;
+    --tile-shadow-light: rgb(81 161 255 / 25%);
+    --search-outline-light: rgba(0, 0, 0, 0.1);
+    --search-svg-light: rgb(170 170 170);
+    --placeholder-color-light: rgb(170 170 170);
+    --search-outline-focus-light: rgb(200 225 255);
+    --search-svg-focus-light: rgb(200 225 255);
+    --text-light: #555c67;
+
+    --tile-dark: #004a75;
+    --background-dark: #002438;
+    --button-dark: #9599a0;
+    --tile-shadow-dark: rgb(81 161 255 / 25%);
+    --search-outline-dark: rgba(255, 255, 255, 0.1);
+    --search-svg-dark: rgb(151, 151, 151);
+    --placeholder-color-dark: rgb(151, 151, 151);
+    --search-outline-focus-dark: rgb(52, 127, 219);
+    --search-svg-focus-dark: rgb(52, 127, 219);
+    --text-dark: #c4c8cf;
+
+    --tile: var(--tile-light);
+    --background: var(--background-light);
+    --button: var(--button-light);
+    --tile-shadow: var(--tile-shadow-light);
+    --search-outline: var(--search-outline-light);
+    --search-outline-focus: var(--search-svg-focus-light);
+    --search-svg: var(--search-svg-light);
+    --search-svg-focus: var(--search-svg-focus-light);
+    --placeholder-color: var(--placeholder-color-light);
+    --text: var(--text-light);
+}
+
+body:has(.theme-checkbox:checked) {
+    --tile: var(--tile-dark);
+    --background: var(--background-dark);
+    /* --button: var(--button-dark); */
+    --tile-shadow: var(--tile-shadow-dark);
+    --search-outline: var(--search-outline-dark);
+    --search-outline-focus: var(--search-outline-focus-dark);
+    --search-svg: var(--search-svg-dark);
+    --search-svg-focus: var(--search-svg-focus-dark);
+    --placeholder-color: var(--placeholder-color-dark);
+    --text: var(--text-dark);
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr clamp(250px, 30%, 600px);
+    grid-template-rows: auto 1fr;
+    padding: 45px 30px;
+    max-width: 1500px;
+    margin: 0 auto;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+/* all tiles */
+header {
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 20px 0px 30px -12px var(--tile-shadow);
+    padding: 16px 24px;
+    background-color: var(--tile);
+}

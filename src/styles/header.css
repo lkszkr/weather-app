@@ -1,0 +1,111 @@
+header {
+    grid-column: 1/-1;
+    display: flex;
+    gap: 20px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.header-left h1 {
+    color: var(--main-accent);
+    font-size: 25px;
+}
+
+.header-left span {
+    font-size: 18px;
+    padding-left: 30px;
+}
+
+search {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+form {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    min-width: 100px;
+}
+
+.search-form input {
+    width: 100%;
+    align-self: stretch;
+    border: none;
+    border-radius: 8px;
+    outline: 2px solid var(--search-outline);
+    padding: 0 40px;
+    stroke: var(--search-svg);
+    background-color: var(--input);
+    color: var(--text);
+}
+
+.search-form input:focus {
+    outline: 2px solid var(--search-outline-focus);
+}
+
+.search-form input::placeholder {
+    color: var(--placeholder-color);
+}
+
+
+.search-form input::-webkit-search-cancel-button {
+    display: none;
+}
+
+.search-form svg {
+    position: absolute;
+    left: 10px;
+    pointer-events: none;
+    height: 20px;
+    width: auto;
+    stroke: var(--search-svg);
+}
+
+.search-form:has(input:focus) svg {
+    stroke: var(--search-svg-focus)
+}
+
+.header-right {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.theme-checkbox {
+    display: none;
+}
+
+.theme-label {
+    cursor: pointer;
+    display: inline-block;
+
+}
+
+.light-mode-icon {
+    display: none;
+}
+
+.dark-mode-icon {
+    display: block;
+    fill: var(--text);
+}
+
+.theme-checkbox:checked+.theme-label .dark-mode-icon {
+    display: none;
+}
+
+.theme-checkbox:checked+.theme-label .light-mode-icon {
+    display: block;
+    fill: var(--text);
+}
