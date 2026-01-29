@@ -1,0 +1,101 @@
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 20px;
+    gap: 25px;
+    padding-top: 20px;
+}
+
+.current-weather-tile {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+}
+
+.title {
+    font-size: 1rem;
+    align-self: start;
+}
+
+.current-time {
+    justify-self: end;
+    align-self: center;
+    font-size: 1.7rem;
+    font-weight: 900;
+}
+
+.weather-icon {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    height: 200px;
+    align-self: center;
+    justify-self: center;
+}
+
+.temp {
+    justify-self: end;
+    align-self: center;
+
+    display: flex;
+    align-items: center;
+}
+
+.temp-data {
+    justify-self: end;
+    align-self: end;
+
+    font-size: 4rem;
+    font-weight: 900;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.temp-data svg:first-of-type {
+    height: 0.8em;
+    color: var(--therm-hot);
+}
+
+.temp-data svg:last-of-type {
+    height: 0.8em;
+    color: var(--text);
+}
+
+.weather-desc {
+    justify-self: end;
+    align-self: center;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 140px;
+    padding: 20px;
+}
+
+.desc {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+.tile svg {
+    width: 24px;
+    height: 24px;
+    color: var(--text);
+}
+
+.tile-data {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: auto;
+}
