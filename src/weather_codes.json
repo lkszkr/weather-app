@@ -155,13 +155,13 @@
         
     },
     "96": {
-        "description": "Thunderstorm with slight hail",
+        "description": "Thunderstorm: Slight hail",
         "icon-day": "src/assets/weather_icons/thunderstorms-day-rain.svg",
         "icon-night": "src/assets/weather_icons/thunderstorms-night-rain.svg"
         
     },
     "99": {
-        "description": "Thunderstorm with heavy hail",
+        "description": "Thunderstorm: Heavy hail",
         "icon-day": "src/assets/weather_icons/thunderstorms-day-rain.svg",
         "icon-night": "src/assets/weather_icons/thunderstorms-night-rain.svg"
         

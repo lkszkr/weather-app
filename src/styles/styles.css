@@ -1,15 +1,15 @@
 @import url(./reset.css);
 @import url(./header.css);
 @import url(./main_section.css);
+@import url(./aside_section.css);
 
 :root {
     --main-accent: #51a1ff;
     --therm-hot: #ef4444;
     --therm-cold: #182cc4;
-
+    
     --tile-light: #f9fdff;
     --background-light: #f1f7f9;
-    --button-light: #555c67;
     --tile-shadow-light: rgb(81 161 255 / 25%);
     --search-outline-light: rgba(0, 0, 0, 0.1);
     --search-svg-light: rgb(170 170 170);
@@ -17,10 +17,13 @@
     --search-outline-focus-light: rgb(200 225 255);
     --search-svg-focus-light: rgb(200 225 255);
     --text-light: #555c67;
+    --button-light: #555c67;
+    --button-hover-light: #696f79;
+    --button-text-light: #f9fdff;
+    --tile-border-light: rgba(85, 92, 103, 0.2);
 
     --tile-dark: #004a75;
     --background-dark: #002438;
-    --button-dark: #9599a0;
     --tile-shadow-dark: rgb(81 161 255 / 25%);
     --search-outline-dark: rgba(255, 255, 255, 0.1);
     --search-svg-dark: rgb(151, 151, 151);
@@ -28,10 +31,13 @@
     --search-outline-focus-dark: rgb(52, 127, 219);
     --search-svg-focus-dark: rgb(52, 127, 219);
     --text-dark: #c4c8cf;
+    --button-dark: #555c67;
+    --button-hover-dark: #4a5058;
+    --button-text-dark: #c4c8cf;
+    --tile-border-dark: rgba(196, 200, 207, 0.2);
 
     --tile: var(--tile-light);
     --background: var(--background-light);
-    --button: var(--button-light);
     --tile-shadow: var(--tile-shadow-light);
     --search-outline: var(--search-outline-light);
     --search-outline-focus: var(--search-svg-focus-light);
@@ -39,12 +45,15 @@
     --search-svg-focus: var(--search-svg-focus-light);
     --placeholder-color: var(--placeholder-color-light);
     --text: var(--text-light);
+    --button: var(--button-light);
+    --buton-hover: var(--button-hover-light);
+    --button-text: var(--button-text-light);
+    --tile-border: var(--tile-border-light);
 }
 
 body:has(.theme-checkbox:checked) {
     --tile: var(--tile-dark);
     --background: var(--background-dark);
-    /* --button: var(--button-dark); */
     --tile-shadow: var(--tile-shadow-dark);
     --search-outline: var(--search-outline-dark);
     --search-outline-focus: var(--search-outline-focus-dark);
@@ -52,10 +61,14 @@ body:has(.theme-checkbox:checked) {
     --search-svg-focus: var(--search-svg-focus-dark);
     --placeholder-color: var(--placeholder-color-dark);
     --text: var(--text-dark);
+    --button: var(--button-dark);
+    --buton-hover: var(--button-hover-dark);
+    --button-text: var(--button-text-dark);
+    --tile-border: var(--tile-border-dark);
 }
 
 body {
-    min-height: 100vh;
+    max-height: 100vh;
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     grid-template-rows: auto 1fr;
@@ -69,7 +82,8 @@ body {
 /* all tiles */
 header,
 .current-weather-tile,
-.tile {
+.tile,
+aside {
     border-radius: 24px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     box-shadow: 20px 0px 30px -12px var(--tile-shadow);

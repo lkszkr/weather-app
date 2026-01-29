@@ -1,9 +1,8 @@
 main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding-top: 20px;
+    margin-top: 20px;
     gap: 25px;
-    padding-top: 20px;
 }
 
 .current-weather-tile {
@@ -33,14 +32,6 @@ main {
     height: 200px;
     align-self: center;
     justify-self: center;
-}
-
-.temp {
-    justify-self: end;
-    align-self: center;
-
-    display: flex;
-    align-items: center;
 }
 
 .temp-data {

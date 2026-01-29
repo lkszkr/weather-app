@@ -1,0 +1,103 @@
+aside {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 20px;
+    min-height: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.forecast-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-btn {
+    color: var(--text);
+    border-style: none;
+    background-color: transparent;
+    padding: 5px;
+}
+
+.nav-btn:hover {
+    cursor: pointer;
+    text-shadow: 0.5px 0 0 currentColor;
+}
+
+.nav-active {
+    text-shadow: 0.5px 0 0 currentColor;
+    border-bottom: 2px solid var(--button);
+}
+
+.current-btn {
+    border-style: none;
+    background-color: var(--button);
+    border-radius: 8px;
+    padding: 7px 10px;
+    color: var(--button-text);
+}
+
+.current-btn:hover {
+    cursor: pointer;
+    background-color: var(--buton-hover);
+}
+
+.forecast-list {
+    flex-grow: 1;
+    overflow: auto;
+    margin-top: 10px;
+    padding: 0px 15px;
+    scrollbar-color: var(--button) transparent;
+}
+
+.forecast-tile {
+    display: flex;
+    font-size: 0.9rem;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    gap: 10px;
+    border-bottom: 1px solid var(--tile-border);
+}
+
+.forecast-tile:hover {
+    text-shadow: 0.5px 0 0 currentColor;
+    cursor: pointer;
+}
+
+.forecast-tile:last-of-type {
+    border: none;
+}
+
+.forecast-icon {
+    height: 70px;
+}
+
+.forecast-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.forecast-temp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.8rem;
+    gap: 3px;
+}
+
+.forecast-temp svg {
+    height: 0.8em;
+    color: var(--text);
+}
+
+.forecast-details {
+    display: flex;
+    flex-direction: column;
+}
+
