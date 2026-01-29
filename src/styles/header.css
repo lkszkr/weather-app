@@ -11,6 +11,7 @@ header {
 }
 
 .header-left h1 {
+    font-family: "Pacifico", cursive;
     color: var(--main-accent);
     font-size: 25px;
 }

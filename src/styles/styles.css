@@ -14,8 +14,8 @@
     --search-outline-light: rgba(0, 0, 0, 0.1);
     --search-svg-light: rgb(170 170 170);
     --placeholder-color-light: rgb(170 170 170);
-    --search-outline-focus-light: rgb(200 225 255);
-    --search-svg-focus-light: rgb(200 225 255);
+    --search-outline-focus-light: rgb(98, 157, 230);
+    --search-svg-focus-light: rgb(98, 157, 230);
     --text-light: #555c67;
     --button-light: #555c67;
     --button-hover-light: #696f79;
@@ -40,7 +40,7 @@
     --background: var(--background-light);
     --tile-shadow: var(--tile-shadow-light);
     --search-outline: var(--search-outline-light);
-    --search-outline-focus: var(--search-svg-focus-light);
+    --search-outline-focus: var(--search-outline-focus-light);
     --search-svg: var(--search-svg-light);
     --search-svg-focus: var(--search-svg-focus-light);
     --placeholder-color: var(--placeholder-color-light);
@@ -68,6 +68,7 @@ body:has(.theme-checkbox:checked) {
 }
 
 body {
+    font-family: "Varela Round", sans-serif;
     max-height: 100vh;
     display: grid;
     grid-template-columns: 1.5fr 1fr;
