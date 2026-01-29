@@ -47,6 +47,8 @@ form {
     stroke: var(--search-svg);
     background-color: var(--input);
     color: var(--text);
+
+    position: relative;
 }
 
 .search-form input:focus {
@@ -75,6 +77,32 @@ form {
     stroke: var(--search-svg-focus)
 }
 
+.suggestions {
+    display: none;
+
+    position: absolute;
+    width: 100%;
+    top: calc(100% + 8px);
+    max-height: 200px;
+    overflow: auto;
+
+    flex-direction: column;
+    gap: 15px;
+    
+    background-color: var(--tile);
+    border-radius: 8px;
+    outline: 2px solid var(--search-outline);
+    padding: 10px 20px;
+}
+
+.suggestions.active {
+    display: flex;
+}
+
+.suggestions span {
+    text-decoration: underline;
+}
+
 .header-right {
     display: flex;
     justify-content: end;
@@ -90,7 +118,8 @@ form {
 .theme-label {
     cursor: pointer;
     display: inline-block;
-
+    padding: 5px;
+    user-select: none;
 }
 
 .light-mode-icon {
