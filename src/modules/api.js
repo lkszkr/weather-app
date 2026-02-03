@@ -6,11 +6,12 @@ export async function fetchGeocoding(name = 'warsaw') {
         const res = await fetch(url);
         if (!res.ok) throw new Error(res.status);
         rawData = await res.json();
+        if(!rawData.results) throw new Error('No results');
     } catch (err) {
         console.log(err);
         return [];
     }
-
+    console.log(rawData)
     const data = rawData.results.map(obj => {
         return {
             lat: obj.latitude,

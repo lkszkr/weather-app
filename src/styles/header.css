@@ -16,7 +16,7 @@ header {
     font-size: 25px;
 }
 
-.header-left span {
+.header-left .location {
     font-size: 18px;
     padding-left: 30px;
 }
@@ -89,6 +89,7 @@ form {
     flex-direction: column;
     gap: 15px;
     
+    list-style: none;
     background-color: var(--tile);
     border-radius: 8px;
     outline: 2px solid var(--search-outline);
@@ -99,8 +100,13 @@ form {
     display: flex;
 }
 
-.suggestions span {
+.suggestions li {
     text-decoration: underline;
+}
+
+.suggestions li:hover {
+    text-shadow: 0.5px 0 0 currentColor;
+    cursor: pointer;
 }
 
 .header-right {

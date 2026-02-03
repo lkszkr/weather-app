@@ -11,7 +11,7 @@
     --tile-light: #f9fdff;
     --background-light: #f1f7f9;
     --tile-shadow-light: rgb(81 161 255 / 25%);
-    --search-outline-light: rgba(0, 0, 0, 0.1);
+    --search-outline-light: rgb(223, 223, 223);
     --search-svg-light: rgb(170 170 170);
     --placeholder-color-light: rgb(170 170 170);
     --search-outline-focus-light: rgb(98, 157, 230);
@@ -25,7 +25,7 @@
     --tile-dark: #004a75;
     --background-dark: #002438;
     --tile-shadow-dark: rgb(81 161 255 / 25%);
-    --search-outline-dark: rgba(255, 255, 255, 0.1);
+    --search-outline-dark: rgb(0, 90, 143);
     --search-svg-dark: rgb(151, 151, 151);
     --placeholder-color-dark: rgb(151, 151, 151);
     --search-outline-focus-dark: rgb(52, 127, 219);
