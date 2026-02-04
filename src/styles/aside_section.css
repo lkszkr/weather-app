@@ -22,6 +22,7 @@ aside {
     border-style: none;
     background-color: transparent;
     padding: 5px;
+    border-bottom: 2px solid var(--tile);
 }
 
 .nav-btn:hover {
@@ -29,7 +30,7 @@ aside {
     text-shadow: 0.5px 0 0 currentColor;
 }
 
-.nav-active {
+.btn-active {
     text-shadow: 0.5px 0 0 currentColor;
     border-bottom: 2px solid var(--button);
 }
@@ -50,8 +51,9 @@ aside {
 .forecast-list {
     flex-grow: 1;
     overflow: auto;
+    scrollbar-gutter: stable;
     margin-top: 10px;
-    padding: 0px 15px;
+    padding: 10px;
     scrollbar-color: var(--button) transparent;
 }
 
@@ -76,19 +78,30 @@ aside {
 
 .forecast-icon {
     height: 70px;
+    width: 70px;
 }
 
 .forecast-info {
     display: flex;
     flex-direction: column;
+    width: 12ch;
+}
+
+.forecast-info span {
+    width: 100%;
+    overflow: clip;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .forecast-temp {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: end;;
     font-size: 1.8rem;
     gap: 3px;
+    width: 90px;
 }
 
 .forecast-temp svg {
@@ -99,5 +112,5 @@ aside {
 .forecast-details {
     display: flex;
     flex-direction: column;
+    width: 150px;
 }
-
