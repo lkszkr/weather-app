@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Varela+Round&display=swap" rel="stylesheet">
     <title>Weather</title>
 </head>
+
 <body>
     <header>
         <div class="header-left">
             <h1>Weather</h1>
-            <span class="location">London, United Kingdom</span>
+            <span class="location"></span>
         </div>
         <search>
             <form action="" class="search-form">
@@ -20,7 +22,8 @@
                     <circle r="9" cx="10" cy="10" stroke-width="2" fill="transparent" />
                     <line x1="16" y1="16" x2="23" y2="23" stroke-width="2" />
                 </svg>
-                <input type="search" name="search" id="search" autocomplete="off" placeholder="Search Location (e.g. London)" required minlength="3" />
+                <input type="search" name="search" id="search" autocomplete="off"
+                    placeholder="Search Location (e.g. London)" required minlength="3" />
                 <ul class="suggestions">
                 </ul>
             </form>
@@ -43,58 +46,10 @@
     </header>
     <main>
         <div class="current-weather-tile">
-            <span class="title">Current weather</span>
-            <span class="current-time">13:32</span>
-            <svg class="weather-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 64 64">
-                <defs>
-                    <linearGradient id="b" x1="16.5" x2="21.5" y1="19.67" y2="28.33" gradientUnits="userSpaceOnUse">
-                        <stop offset="0" stop-color="#fbbf24" />
-                        <stop offset=".45" stop-color="#fbbf24" />
-                        <stop offset="1" stop-color="#f59e0b" />
-                    </linearGradient>
-                    <linearGradient id="c" x1="22.56" x2="39.2" y1="21.96" y2="50.8" gradientUnits="userSpaceOnUse">
-                        <stop offset="0" stop-color="#f3f7fe" />
-                        <stop offset=".45" stop-color="#f3f7fe" />
-                        <stop offset="1" stop-color="#deeafb" />
-                    </linearGradient>
-                    <linearGradient id="a" x1="23.31" x2="24.69" y1="44.3" y2="46.7" gradientUnits="userSpaceOnUse">
-                        <stop offset="0" stop-color="#4286ee" />
-                        <stop offset=".45" stop-color="#4286ee" />
-                        <stop offset="1" stop-color="#0950bc" />
-                    </linearGradient>
-                    <linearGradient id="d" x1="30.31" x2="31.69" y1="44.3" y2="46.7" xlink:href="#a" />
-                    <linearGradient id="e" x1="37.31" x2="38.69" y1="44.3" y2="46.7" xlink:href="#a" />
-                </defs>
-                <circle cx="19" cy="24" r="5" fill="url(#b)" stroke="#f8af18" stroke-miterlimit="10"
-                    stroke-width=".5" />
-                <path fill="none" stroke="#fbbf24" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"
-                    d="M19 15.67V12.5m0 23v-3.17m5.89-14.22l2.24-2.24M10.87 32.13l2.24-2.24m0-11.78l-2.24-2.24m16.26 16.26l-2.24-2.24M7.5 24h3.17m19.83 0h-3.17">
-                    <animateTransform attributeName="transform" dur="45s" repeatCount="indefinite" type="rotate"
-                        values="0 19 24; 360 19 24" />
-                </path>
-                <path fill="url(#c)" stroke="#e6effc" stroke-miterlimit="10" stroke-width=".5"
-                    d="M46.5 31.5h-.32a10.49 10.49 0 00-19.11-8 7 7 0 00-10.57 6 7.21 7.21 0 00.1 1.14A7.5 7.5 0 0018 45.5a4.19 4.19 0 00.5 0v0h28a7 7 0 000-14z" />
-                <path fill="none" stroke="url(#a)" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"
-                    d="M24.08 45.01l-.16.98">
-                    <animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="translate"
-                        values="1 -5; -2 10" />
-                    <animate attributeName="opacity" dur="1.5s" repeatCount="indefinite" values="0;1;1;0" />
-                </path>
-                <path fill="none" stroke="url(#d)" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"
-                    d="M31.08 45.01l-.16.98">
-                    <animateTransform attributeName="transform" begin="-0.5s" dur="1.5s" repeatCount="indefinite"
-                        type="translate" values="1 -5; -2 10" />
-                    <animate attributeName="opacity" begin="-0.5s" dur="1.5s" repeatCount="indefinite"
-                        values="0;1;1;0" />
-                </path>
-                <path fill="none" stroke="url(#e)" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"
-                    d="M38.08 45.01l-.16.98">
-                    <animateTransform attributeName="transform" begin="-1s" dur="1.5s" repeatCount="indefinite"
-                        type="translate" values="1 -5; -2 10" />
-                    <animate attributeName="opacity" begin="-1s" dur="1.5s" repeatCount="indefinite" values="0;1;1;0" />
-                </path>
-            </svg>
+            <span class="title"></span>
+            <span class="current-time"></span>
+            <div class="weather-icon">
+            </div>
             <div class="temp-data">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="13 14 36 36">
                     <defs>
@@ -117,56 +72,66 @@
                     <path fill="url(#therm_1)" stroke="url(#therm_2)" stroke-linecap="round" stroke-linejoin="round"
                         d="M39 41.9a7 7 0 11-14 0 7.12 7.12 0 013-5.83v-17a4 4 0 118 0v17a7.12 7.12 0 013 5.83zM32.5 25H36m-3.5-4H36m-3.5 8H36" />
                 </svg>
-                <span>20</span>
+                <span class="temperature"></span>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="18 17 28 28">
                     <path fill="currentColor"
                         d="M27 30a3.75 3.75 0 01-2.75 1.18A3.8 3.8 0 0121.48 30a3.91 3.91 0 012.78-6.69A3.89 3.89 0 0127 30zm-4-1.54a1.65 1.65 0 001.22.51 1.69 1.69 0 001.22-.51 1.61 1.61 0 00.51-1.2 1.71 1.71 0 00-.5-1.23 1.65 1.65 0 00-1.23-.52A1.63 1.63 0 0023 26a1.68 1.68 0 00-.51 1.23 1.61 1.61 0 00.51 1.19zM32 24.79a7.12 7.12 0 015.08-1.67c3.4 0 5.58 1.34 6.52 4a.72.72 0 01-.5 1.05l-1.32.46a.88.88 0 01-.65 0 1 1 0 01-.38-.54c-.53-1.48-1.75-2.21-3.67-2.21a4.19 4.19 0 00-2.85.87 3.23 3.23 0 00-1 2.54v5.3a3.24 3.24 0 001 2.54 4.09 4.09 0 002.85.89c1.9 0 3.12-.74 3.67-2.23a1 1 0 01.41-.56.75.75 0 01.64.06l1.3.45a.75.75 0 01.53 1.06q-1.43 4-6.55 4A7.17 7.17 0 0132 39.21a6 6 0 01-1.79-4.59v-5.26A5.94 5.94 0 0132 24.79z" />
                 </svg>
             </div>
-            <span class="weather-desc">Thunderstorm: Slight or moderate</span>
+            <span class="weather-desc"></span>
         </div>
         <div class="tile">
             <span class="desc">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="15 14 34 34">
                     <defs>
-                        <linearGradient id="rain" x1="23.61" x2="37.27" y1="21.85" y2="45.52"
+                        <linearGradient id="rain_drop" x1="23.61" x2="37.27" y1="21.85" y2="45.52"
                             gradientUnits="userSpaceOnUse">
                             <stop offset="0" stop-color="#3392d6" />
                             <stop offset=".45" stop-color="#3392d6" />
                             <stop offset="1" stop-color="#2477b2" />
                         </linearGradient>
                     </defs>
-                    <path fill="url(#rain)" stroke="#2885c7" stroke-miterlimit="10" stroke-width=".5"
+                    <path fill="url(#rain_drop)" stroke="#2885c7" stroke-miterlimit="10" stroke-width=".5"
                         d="M32 17c-6.09 9-10 14.62-10 20.09a10 10 0 0020 0C42 31.62 38.09 26 32 17z">
+                        <animateTransform attributeName="transform" calcMode="spline" dur="5s"
+                            keySplines="0.5 0 0.5 1; 0.5 0 0.5 1" repeatCount="indefinite" type="scale"
+                            values="1 1; 1 .9; 1 1" />
                     </path>
                 </svg>
                 Precipitation probability
             </span>
-            <span class="tile-data">50 %</span>
+            <div class="tile-data"><span class="precipitationProbability"></span><span>%</span></div>
         </div>
         <div class="tile">
             <span class="desc">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                     viewBox="15 14 34 34">
                     <defs>
-                        <linearGradient id="raindrop_1" x1="17.61" x2="31.27" y1="21.85" y2="45.52"
+                        <linearGradient id="rain_drop_1" x1="17.61" x2="31.27" y1="21.85" y2="45.52"
                             gradientUnits="userSpaceOnUse">
                             <stop offset="0" stop-color="#3392d6" />
                             <stop offset=".45" stop-color="#3392d6" />
                             <stop offset="1" stop-color="#2477b2" />
                         </linearGradient>
-                        <linearGradient id="raindrop_2" x1="29.61" x2="43.27" y1="21.85" y2="45.52" xlink:href="#a" />
+                        <linearGradient id="rain_drop_2" x1="29.61" x2="43.27" y1="21.85" y2="45.52"
+                            xlink:href="#rain_drop_1" />
                     </defs>
-                    <path fill="url(#raindrop_1)" stroke="#2885c7" stroke-miterlimit="10" stroke-width=".5"
+                    <path fill="url(#rain_drop_1)" stroke="#2885c7" stroke-miterlimit="10" stroke-width=".5"
                         d="M26 17c-6.09 9-10 14.62-10 20.09a10 10 0 0020 0C36 31.62 32.09 26 26 17z">
+                        <animateTransform attributeName="transform" calcMode="spline" dur="5s"
+                            keySplines="0.5 0 0.5 1; 0.5 0 0.5 1" repeatCount="indefinite" type="scale"
+                            values="1 1; 1 .9; 1 1" />
                     </path>
-                    <path fill="url(#raindrop_2)" stroke="#2885c7" stroke-miterlimit="10" stroke-width=".5"
+                    <path fill="url(#rain_drop_2)" stroke="#2885c7" stroke-miterlimit="10" stroke-width=".5"
                         d="M38 17c-6.09 9-10 14.62-10 20.09a10 10 0 0020 0C48 31.62 44.09 26 38 17z">
+                        <animateTransform attributeName="transform" begin="-3s" calcMode="spline" dur="5s"
+                            keySplines="0.5 0 0.5 1; 0.5 0 0.5 1" repeatCount="indefinite" type="scale"
+                            values="1 1; 1 .9; 1 1" />
                     </path>
                 </svg>
                 Precipitation
             </span>
-            <span class="tile-data">10.5 mm</span>
+            <div class="tile-data"><span class="precipitation"></span><span>mm</span></div>
         </div>
         <div class="tile">
             <span class="desc">
@@ -192,7 +157,7 @@
                 </svg>
                 Wind speed
             </span>
-            <span class="tile-data">99 km/h</span>
+            <div class="tile-data"><span class="windSpeed"></span><span>km/h</span></div>
         </div>
         <div class="tile">
             <span class="desc">
@@ -221,7 +186,7 @@
                 </svg>
                 UV index
             </span>
-            <span class="tile-data">11</span>
+            <div class="tile-data"><span class="uvIndex"></span></div>
         </div>
         <div class="tile">
             <span class="desc">
@@ -247,7 +212,7 @@
                 </svg>
                 Pressure
             </span>
-            <span class="tile-data">1200.54 hPa</span>
+            <div class="tile-data"><span class="surfacePressure"></span><span>hPa</span></div>
         </div>
         <div class="tile">
             <span class="desc">
@@ -267,7 +232,8 @@
                 </svg>
                 Humidity
             </span>
-            <span class="tile-data">30%</span>
+            <div class="tile-data"><span class="tile-data relativeHumidity"></span><span class="tile-data">%</span>
+            </div>
         </div>
         <div class="tile">
             <span class="desc">
@@ -313,7 +279,7 @@
                 </svg>
                 Air quality
             </span>
-            <span class="tile-data">205 AQI</span>
+            <div class="tile-data"><span class="europeanAqi"></span><span>AQI</span></div>
         </div>
         <div class="tile">
             <span class="desc">
@@ -342,7 +308,7 @@
                 </svg>
                 Sunrise
             </span>
-            <span class="tile-data">10:20</span>
+            <div class="tile-data"><span class="sunrise"></span></div>
         </div>
         <div class="tile">
             <span class="desc">
@@ -371,9 +337,8 @@
                 </svg>
                 Sunset
             </span>
-            <span class="tile-data">19:30</span>
+            <div class="tile-data"><span class="sunset"></span></div>
         </div>
-
     </main>
     <aside>
         <div class="nav">
@@ -466,4 +431,5 @@
         </div>
     </aside>
 </body>
+
 </html>

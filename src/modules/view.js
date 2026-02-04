@@ -1,4 +1,5 @@
 import * as api from './api.js';
+import { resolveWeatherCode } from './utils.js';
 
 class View {
 
@@ -34,18 +35,40 @@ class View {
         });
     }
 
-    updateContent(locationData){
-        
-        api.fetchWeather();
-        this.#updateMain();
-        this.#updateAside();
+    async updateContent(locationData) {
+        const data = await api.fetchWeather(locationData.lat, locationData.lng);
+        this.#updateHeader(locationData.name, locationData.country);
+        this.#updateMain(data.current, 'Current');
+        // this.#updateAside(data.hourly, data.daily);
     }
 
-    #updateMain(){
+    #updateHeader(city, country) {
+        const location = document.querySelector('.location');
+        location.textContent = `${city}, ${country}`;
+    }
+
+    async #updateMain(data, dataTitle) {
+
+        const weatherCodeData = resolveWeatherCode(data.weatherCode, data.isNight);
+        this.#updateSvg('.weather-icon', weatherCodeData.svg);
+        this.#updateSpan('.weather-desc', weatherCodeData.desc);
+
+        this.#updateSpan('.title', dataTitle);
+        this.#updateSpan('.current-time', data.time.toLocaleTimeString('en-GB', { hour: 'numeric', minute: 'numeric' }));
+        this.#updateSpan('.temperature', data.temperature);
+        this.#updateSpan('.precipitationProbability', data.precipitationProbability);
+        this.#updateSpan('.precipitation', data.precipitation);
+        this.#updateSpan('.windSpeed', data.windSpeed);
+        this.#updateSpan('.uvIndex', data.uvIndex);
+        this.#updateSpan('.surfacePressure', data.surfacePressure);
+        this.#updateSpan('.relativeHumidity', data.relativeHumidity);
+        this.#updateSpan('.europeanAqi', data.europeanAqi);
+        this.#updateSpan('.sunrise', data.sunrise.toLocaleTimeString('en-GB', { hour: 'numeric', minute: 'numeric' }));
+        this.#updateSpan('.sunset', data.sunset.toLocaleTimeString('en-GB', { hour: 'numeric', minute: 'numeric' }));
 
     }
 
-    #updateAside(){
+    #updateAside() {
 
     }
 
@@ -73,6 +96,7 @@ class View {
 
     #updateSuggestions(data) {
         const ul = document.querySelector('.suggestions');
+        const input = document.querySelector('#search');
         ul.textContent = '';
         data.forEach(element => {
             const li = document.createElement('li');
@@ -81,13 +105,24 @@ class View {
             li.setAttribute('data-lng', element.lng);
             li.setAttribute('data-name', element.name);
             li.setAttribute('data-country', element.country);
-            li.addEventListener('click', (e) => {
-                this.updateContent();
+            li.addEventListener('mousedown', (e) => {
+                this.updateContent(element);
                 ul.textContent = '';
+                input.value = '';
                 ul.classList.remove('active');
             });
             ul.appendChild(li);
         });
+    }
+
+    #updateSpan(selector, value) {
+        const span = document.querySelector(selector);
+        if (span) span.textContent = value + " ";
+    }
+
+    #updateSvg(selector, value) {
+        const svg = document.querySelector(selector);
+        if (svg) svg.innerHTML = `<img src="${value}" alt="weather">`;
     }
 }
 

@@ -29,9 +29,10 @@ main {
 .weather-icon {
     grid-column: 1/2;
     grid-row: 2/4;
-    height: 200px;
     align-self: center;
     justify-self: center;
+    height: 200px;
+    width: 200px;
 }
 
 .temp-data {
@@ -87,7 +88,7 @@ main {
 }
 
 .tile-data {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 700;
     margin: auto;
 }
